@@ -1,0 +1,172 @@
+ /*正文section 开始 */
+section{
+	background-color: white;
+}
+section .container-fluid.summary{
+	padding: 184px 0 0;
+
+}
+section .summary .title{
+	width: 49%;
+	margin: 0 auto ;
+	min-width: 320px;
+	margin-bottom: 68px;
+}
+section .summary .swipe-banner{
+	width: 100%;
+	position: relative;
+}
+.swipe-banner .swipe-inner{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.swipe-banner .swipe-inner .swiper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: none;
+}
+.swipe-banner .swipe-inner .swiper.active{
+	display: block;
+}
+.swipe-banner .blank{
+	width: 100%;
+}
+.swipe-banner .paganation{
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	bottom: 40px;
+	width: 70px;
+	height: 14px;
+}
+.swipe-banner .paganation span{
+	float: left;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: #b4b4b4;
+	margin-right: 14px;
+}
+.swipe-banner .paganation span:last-child{
+	margin-right: 0;
+}
+.swipe-banner .paganation span.active{
+	background-color: #cfdb00;
+}
+
+section .work-wrap{
+	padding: 65px 19px 110px;
+	background-color: #f5f5f5;
+	position: relative;
+}
+section .work-wrap .img-container{
+	width: 100%;
+}
+.img-container li{
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-left: 3%;
+	overflow: hidden;
+}
+.img-container p{
+	text-align: center;
+}
+.img-container li .work{
+	overflow: hidden;
+	margin-right: 1%;
+	float: left;
+	position: relative;
+}
+.img-container li .work img{
+	height: 100%;
+	width: auto;
+}
+.img-container li .work:nth-of-type(3) img{
+	margin-right: 0;
+}
+.img-container li .work a{
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 8.5%;
+	background-color: rgba(0,0,0,0.5);
+	opacity: 0;
+	transition: 1.5s;
+}
+.img-container li .work a .scaleBtn{	
+	width: 100%;
+	height: 100%;
+	background-color: #cfdb00;	
+	background-image: url("../img/render-scale.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 0.7;
+	background-size: 50px;
+}
+
+.img-container li .work:hover a{
+	opacity: 1;
+}
+/*缩略图 放大 蒙层*/
+.scale-mask{
+	position: fixed;
+	box-sizing: border-box;
+	padding-top: 2%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 1031;
+	display: none;
+}
+.scale-mask img{
+	width: 85%;
+	height: auto;
+	margin: 0 auto;
+
+}
+.scale-mask.active{
+	display: block;
+}
+.work-wrap .goTop{
+	position: fixed;
+	bottom: 50px;
+	left: 50%;
+	z-index: 10;
+}
+.work-wrap .goTop img{
+	width: 5%;
+	height: auto;
+	min-width: 60px;
+	position: absolute;
+	margin-left: -30px;
+}
+
+
+/*小于 766px 时 改变样式*/
+@media screen and (max-width: 771px){
+	section .summary.container-fluid{
+		padding-top: 130px;
+	}
+	section .summary .title{
+		margin-bottom: 30px;
+	}
+	.img-container li .work{
+		width: 70%;
+		margin-left: 15%;
+	}
+	.img-container li .work img{
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+	}
+}
+/* 正文section 结束 

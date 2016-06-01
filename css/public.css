@@ -1,0 +1,80 @@
+
+ /*导航栏 nav 开始*/
+
+.navbar{
+	background-color: #fefefe !important;
+	box-shadow: 0 -5px 15px rgba(0,0,0,0.8);
+}
+.navbar-header{
+	height: 70px;
+}
+.navbar-brand{
+	padding-top: 20px!important;
+}
+#navbar ul li a{
+	padding-top: 25px !important;
+	padding-bottom: 25px !important;
+}
+
+.navbar-brand img{
+	width: 80%;
+}
+#navbar ul li a{
+	color: #616161;
+	transition: 1s;
+}
+#navbar ul .AuthorActive a{
+	background-color: #cfdb00;
+}
+.navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover{
+	background-color: #cfdb00 !important;
+}
+
+.navbar-header .navbar-toggle{
+	margin-top: 18px;
+}
+
+/* 导航栏 nav 结束*/
+
+/*页脚 footer  开始*/
+footer{
+	padding: 70px 0 75px;
+	background-color: white;
+}
+footer .container .contactUs{
+	width: 20%;
+	margin: 0 auto 80px;
+	min-width: 300px;
+}
+.contactWay{
+	text-align: center;
+}
+.contactWay p{
+	font-size: 1.3rem;
+	line-height: 1.3rem;
+	color: #919191;
+	margin-bottom: 12px;
+}
+/*页脚 footer  结束 */
+
+/*小于700px  时 改变一些padding*/
+@media screen and (max-width: 700px){
+	footer{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	footer .container .contactUs{
+		margin-bottom: 40px;
+	}
+}
+
+/*最底下 copyRight*/
+.copyRight{
+	line-height: 4rem;
+	font-size: 1.8rem;
+	color: white;
+	text-align: center;
+	background-color: #b4b4b4;
+	border-top: 2px solid #cfdb00;
+	margin-bottom: 0;
+}

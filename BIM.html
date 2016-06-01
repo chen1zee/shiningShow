@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>BIM</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/bim.css">
+	<link rel="stylesheet" href="bootStrap_dist/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Fixed navbar -->
+	<nav id="navBar" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="home.html">
+				<img src="img/home_logo.png" alt="">
+				</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li><a href="renderings.html">Renderings</a></li>
+					<li class="AuthorActive"><a href="javascript:void(0);">BIM</a></li>
+					<li><a href="animate.html">3D AnImate</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<!-- 正文 section 开始 -->
+	
+	<section>
+		<div class="contain-title hook">
+			<img src="img/bim-bim.png" alt="" class="bim-bim">
+			<h1>BIM</h1>
+		</div>
+		<div class="page hook">
+			<img src="img/bim-bg1.png" alt="">
+			<div class="wrap">
+				<div class="msg">
+					<p class="title">
+						&nbsp;&nbsp;1.	Model Completion&nbsp;&nbsp;
+					</p>
+					<p class="intro">
+						Establishing and creating the visible and multi-dimension Architecture, Structural and MEP model.
+					</p>
+					<img src="img/bim-intro1.png" alt="" class="imgIntro">
+				</div>
+				<img src="img/bim-work12.png" alt="" class="work12">
+			</div>
+		</div>
+		<div class="page hook">
+			<img src="img/bim-bg2.png" alt="">
+			<div class="wrap">
+				<div class="msg">
+					<p class="title">
+						&nbsp;&nbsp;2.	Clash Detection&nbsp;&nbsp;
+					</p>
+					<p class="intro">
+						Completing the clash detection among various design parties, engineers and even different organisations in construction drawings.
+					</p>
+					<img src="img/bim-intro2.png" alt="" class="imgIntro">
+				</div>
+			</div>
+		</div>
+		<div class="page hook">
+			<img src="img/bim-bg3.png" alt="">
+			<div class="wrap">
+				<div class="msg">
+					<p class="title">
+						&nbsp;&nbsp;3.  MEP Integration&nbsp;&nbsp;
+					</p>
+					<p class="intro">
+						Profoundly completing the pipeline integration, design coordination and intra-organisational cooperation between Plumbing, HVAC and Electrical engineering.
+					</p>
+					<img src="img/bim-intro3.png" alt="" class="imgIntro">
+				</div>
+				<img src="img/bim-work34.png" alt="" class="work3">
+			</div>
+		</div>
+		<div class="page hook">
+			<img src="img/bim-bg4.png" alt="">
+			<div class="wrap">
+				<div class="msg">
+					<p class="title">
+						&nbsp;&nbsp;4. Curtain Wall Remedying&nbsp;&nbsp;
+					</p>
+					<p class="intro">
+						Creating the abnormity wall based on parametric design tools, and completing detailed curtain wall nodes visibly.
+					</p>
+					<img src="img/bim-intro4.png" alt="" class="imgIntro">
+				</div>
+				<img src="img/bim-work4.png" alt="" class="work4">
+			</div>
+		</div>
+		<div class="page hook">
+			<img src="img/bim-bg5.png" alt="">
+			<div class="wrap">
+				<div class="msg">
+					<p class="title">
+						&nbsp;&nbsp;5.  BIM Consulting&nbsp;&nbsp;
+					</p>
+					<p class="intro">
+						To help you to precisely know what is BIM? How BIM use? When and who is suitably to implement BIM? 
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="goTop">
+		<a href="javascript:void(0);">
+			<img src="img/render_top.png" alt="">
+		</a>
+	</div>
+	
+
+	<!-- 正文 section 结束 -->
+
+
+	<!-- 页脚footer开始 -->
+	<footer class="hook">
+		<div class="container">
+			<img src="img/contactUs.png" alt="" class="contactUs">
+			<div class="contactWay">
+				<p>Email：eric@shining365.com</p>
+				<p>Mobile Phone：86 138 1690 3400</p>
+				<p>Tel：+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+			</div>
+		</div>
+	</footer>
+	<!-- 页脚footer结束 -->
+
+	<!-- copyRight -->
+	<p class="copyRight">
+		Copyright © 1998-2015 shining Group
+	</p>
+	
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootStrap_dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+	$(function () {
+		// 鼠标滚轮换屏事件
+
+		// 获取每个页面坐标
+		var pos = [];//pos存储跳转坐标
+		var navH = $("#navBar").height();
+		$(".hook").each(function () {
+			pos.push($(this).offset().top - navH);
+			 /* body... */ 
+		});
+		var i = 0;//根据i来判定跳转
+		$("html,body").scrollTop(0);//初步加载后跳转到顶端
+
+		// 给jquery 元素添加方法
+		$.fn.extend({
+			mousewheel:function (up,down) {
+				$(this).get(0).onmousewheel = fn;
+				if (window.addEventListener) {
+					$(this).get(0).addEventListener("DOMMouseScroll",fn,false);
+				}
+				function fn(e) {
+					var e = e || window.event;
+					e.preventDefault();
+					if (e.wheelDelta < 0 || e.detail > 0) {
+						down();
+					}else {
+						up();
+					}
+					return false;
+					 /* body... */ 
+				}
+				 /* body... */ 
+			}
+		});
+		function down() {				
+				while($(document).scrollTop() >= pos[i]){
+					i++;
+				}
+				if (i >= pos.length - 1) {
+					i = pos.length - 1;
+				}
+				console.log(i);
+				$("html,body").stop().animate({
+					scrollTop:(pos[i]),
+				},800);
+			
+			 // body...  
+		}
+		function up() {
+			while($(document).scrollTop() <= pos[i]){
+				i--;
+			}
+			if (i < 0) {
+				i = 0;
+			}
+			console.log(i);
+			$("html,body").stop().animate({
+				scrollTop:pos[i],
+			},800);
+			 /* body... */ 
+		}
+		$(window).mousewheel(up,down);
+		//放回顶端按钮
+		$(".goTop a").on("click",function () {
+			i = 0;
+			$("html,body").stop().animate({
+				scrollTop:pos[i],
+			},800);
+			 /* body... */ 
+		})
+		 /* body... */ 
+	});
+
+	</script>
+</body>
+</html>

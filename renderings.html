@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>renderings</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/renderings.css">
+	<link rel="stylesheet" href="bootStrap_dist/css/bootstrap.min.css">
+</head>
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="home.html">
+				<img src="img/home_logo.png" alt="">
+				</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="home.html">Home</a></li>
+					<li><a href="about.html">ABOUT</a></li>
+					<li class="AuthorActive"><a href="javascript:void(0);">Renderings</a></li>
+					<li><a href="BIM.html">BIM</a></li>
+					<li><a href="animate.html">3D AnImate</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<!-- 正文 section 开始 -->
+
+	<!-- 缩略图放大 -->		
+	<div class="scale-mask">
+		<img src="" alt="" draggable="false">
+	</div>
+	<section>
+		<!-- banner  轮播图 -->
+		<div class="summary container-fluid">
+			<img src="img/drawing.png" alt="" class="title">
+			<div class="swipe-banner">
+				<div class="swipe-inner">
+					<img src="img/banner-1.png" alt="" class="swiper active">
+					<img src="img/banner-2.png" alt="" class="swiper">
+					<img src="img/banner-3.png" alt="" class="swiper">
+				</div>
+				<img src="img/banner-blank.png" alt="" class="blank">
+				<div class="paganation">
+					<span class="active"></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<div class="work-wrap container-fluid">
+			<ul class="img-container">
+				<!-- 一个li 3个图// 需要后台先匹配好图大小 -->
+				<!-- <li>
+					<div class="work">
+						<img src="" alt="">
+						<a href="">
+							<div class="scaleBtn"></div>
+						</a>
+					</div>
+
+					
+
+					<img src="" alt="">
+					<img src="" alt="">
+				</li> -->
+				<a href="javascript:void(0);" class="goTop">
+					<img src="img/render_top.png" alt="">
+				</a>
+			</ul>
+
+		</div>
+	</section>
+
+	<!-- 正文 section 结束 -->
+
+	<!-- 页脚footer开始 -->
+	<footer>
+		<div class="container">
+			<img src="img/contactUs.png" alt="" class="contactUs">
+			<div class="contactWay">
+				<p>Email：eric@shining365.com</p>
+				<p>Mobile Phone：86 138 1690 3400</p>
+				<p>Tel：+86 21 6598 6866-304  +86 21 6598 3188-304</p>
+			</div>
+		</div>
+	</footer>
+	<!-- 页脚footer结束 -->
+
+	<!-- copyRight -->
+	<p class="copyRight">
+		Copyright © 1998-2015 shining Group
+	</p>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootStrap_dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript">
+	$(function () {
+		// banner轮播功能
+		var index = 0;//根据index轮播
+		function tab() {
+			$(".swiper").eq(index).siblings().fadeOut(1500);
+			$(".swiper").eq(index).fadeIn(3000);
+			$(".paganation span").eq(index).addClass('active').siblings().removeClass('active');
+			 /* body... */
+		}
+		function next() {
+			index++;
+			if (index > 2) {
+				index = 0;
+			}
+			tab();
+			 /* body... */ 
+		}
+		// 自动切图6s
+		var timer = setInterval(next, 6000);
+		// banner上鼠标悬停
+		$(".swipe-banner").hover(function () {
+			clearInterval(timer);
+			 /* body... */ 
+		},function () {
+			timer = setInterval(next, 6000);
+			 /* body... */ 
+		});
+		// 小按钮切图
+		$(".paganation span").on("click",function btnClick() {
+			index = $(this).index();
+			$(".paganation span").off("click");
+			tab();
+			setTimeout(function () {
+				$(".paganation span").on("click",btnClick);
+				 // body...  
+			}, 3500);
+			 /* body... */ 
+		});
+
+		// 瀑布流  
+		// json
+		var imgAdr = [
+			"img/render-work1.png",
+			"img/render-work2.png",
+			"img/render-work3.png",
+			"img/render-work4.png",
+			"img/render-work5.png",
+			"img/render-work6.png",
+			"img/render-work7.png",
+			"img/render-work8.png",
+			"img/render-work9.png",
+			"img/render-work10.png",
+			"img/render-work11.png",
+			"img/render-work12.png",
+			"img/render-work1.png",
+			"img/render-work2.png",
+			"img/render-work3.png",
+			"img/render-work4.png",
+			"img/render-work5.png",
+			"img/render-work6.png",
+			"img/render-work7.png",
+			"img/render-work8.png",
+			"img/render-work9.png",
+			"img/render-work10.png",
+			"img/render-work11.png",
+			"img/render-work12.png",
+		];
+		// 一次生成 2个li  6张图
+		var imgIndex = 0;//加载的后台img下标
+		var maxImgIndex = imgAdr.length - 1;//后台照片最大下标
+		function cre() {
+			var newLi = $("<li/>");
+			newLi.css("opacity",0)
+			for (var i = 0; i < 3; i++) {
+				if (imgIndex > maxImgIndex) {
+					$("<p/>").css("fontSize","30px").html("无更新").appendTo(".img-container");
+					$(window).off("scroll");
+					return;
+				}
+				var newDiv = $("<div class='work'></div>");
+				newDiv.html('<img src='+(imgAdr[imgIndex])+' alt="">'+'<a href="javascript:void(0);">'+'<div class="scaleBtn"></div>'+'</a>');
+				newDiv.appendTo(newLi);
+				imgIndex++;
+			}
+			newLi.appendTo('.img-container');
+			newLi.animate({
+				opacity:1,
+			},800);
+			changeH();
+			 /* body... */ 
+		}
+		// 原始加载2li  6张图
+		cre();
+		cre();
+		// 判定滚到底
+		$(window).on("scroll",function () {
+			var ulTop = $(".img-container").offset().top + $(".img-container").height();
+			if ($(document).scrollTop() + $(window).height() > ulTop + 350) {
+				cre();
+			}
+			 /* body... */ 
+		});
+		// 根据window 视口宽改变图片高
+		// 想个更好的办法(css)动态改变图片高度
+		function changeH() {
+			if ($(window).width() > 756) {
+				var imgH = ($(window).width() * 0.27 > 160)? $(window).width() * 0.27 : 160;
+				$("li .work").height(imgH);
+				$("li .work img").height(imgH);
+			}else{
+				$("li .work").height("");
+				$("li .work img").height("");
+			}
+			
+			 /* body... */ 
+		}
+
+		$(window).resize(function(){
+			changeH();
+			 /* body... */ 
+		});        
+		// 点击缩略图 a 放大 (显示蒙层)
+		$(".img-container").on("click","a",function (e) {
+			e.stopPropagation();
+			$(".scale-mask").on("click",function () {
+				topY = 0;
+				$(".scale-mask img").css("marginTop",0);
+				$(this).removeClass("active");
+				 /* body... */ 
+			});
+			$(".scale-mask img").on("click",function (e) {
+				e.stopPropagation();
+				 /* body... */ 
+			});            
+			$(".scale-mask").addClass('active');
+			var $img = $(this).siblings('img');
+			$(".scale-mask img").attr("src",$img.attr("src"));
+			 /* body... */
+		});
+		var topY = 0;//图片的marginTop 值
+		var mouseY = 0;//鼠标增量
+		// 按鼠标，调整蒙层大图 位置
+		$(".scale-mask img").on("mousedown",function (e) {
+			var orY = e.clientY;
+			$(document).on("mousemove",function (e) {				
+				mouseY = (e.clientY - orY);
+				$(".scale-mask img").css("marginTop",(topY + mouseY));
+				 /* body... */
+			});
+			$(document).on("mouseup",function () {
+				topY += mouseY;
+				mouseY = 0;
+				$(this).off("mousemove");
+				 /* body... */ 
+			})
+			 /* body... */ 
+		});
+		// 返回顶部
+		$(".goTop").on("click",function (e) {
+			e.stopPropagation();
+			$("html,body").animate({
+				scrollTop:0,
+			},1000);
+			 /* body... */ 
+		});		
+		 /* body... */ 
+	})
+
+	</script>
+	
+
+</body>
+</html>

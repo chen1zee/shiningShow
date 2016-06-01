@@ -1,0 +1,55 @@
+/* section  正文开始*/
+section .contact-wrap{
+	padding-top: 175px;
+	background-color: #f5f5f5;
+}
+section .contact-wrap .contact-img{
+	width: 24.2%;
+	margin: 0 auto;
+	min-width: 220px;
+
+}
+section .contact-wrap .contact-us{
+	min-width: 300px;
+	max-width: 400px;
+	width: 35%;
+	margin: 96px auto 0;
+}
+section .contact-wrap p{
+	margin: 96px auto 0;
+
+	line-height: 2.3rem;
+	font-size: 1.6rem;
+	text-align: center;
+}
+section .contact-wrap .contact-map{
+	width: 68.6%;
+	min-width: 330px;
+	margin: 0 auto;
+}
+section .contact-way{
+	font-size: 1.5rem;
+	line-height: 2.3rem;
+	text-align: center;
+	color: #898989;
+	padding: 89px 0 100px;
+}
+/* 小于768px 样式*/
+@media screen and (max-width: 768px){
+	section .contact-wrap{
+		padding-top: 100px;
+	}
+	section .contact-wrap .contact-us{
+		margin-top: 40px;
+	}
+	section .contact-wrap p{
+		margin-top: 50px;
+		font-size: 1.3rem;
+		line-height: 1.8rem;
+	}
+	section .contact-way{
+		padding: 40px 0 50px;
+	}
+}
+
+/* section 正文结束 */
